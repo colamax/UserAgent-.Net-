@@ -1,0 +1,7 @@
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\UserAgent.dll
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\UserAgent.pdb
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\obj\Debug\UserAgent.dll
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\obj\Debug\UserAgent.pdb
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\Light.Data.dll
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\MySql.Data.dll
+c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\Light.Data.xml

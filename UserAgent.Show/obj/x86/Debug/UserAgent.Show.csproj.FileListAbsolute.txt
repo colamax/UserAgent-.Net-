@@ -1,0 +1,11 @@
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\UserAgent.Show.exe
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\UserAgent.Show.pdb
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\obj\x86\Debug\UserAgent.Show.exe
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\obj\x86\Debug\UserAgent.Show.pdb
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\UserAgent.dll
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\Light.Data.dll
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\MySql.Data.dll
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\UserAgent.pdb
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\Light.Data.xml
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\obj\x86\Debug\UserAgent.Show.csprojResolveAssemblyReference.cache
+C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.Show\bin\Debug\UserAgent.Show.exe.config
