@@ -57,6 +57,7 @@ namespace UserAgent
             _parserList.Add(new AdrByLanguagePixelParser());
             _parserList.Add(new WPOSTxtParser());
             _parserList.Add(new MacintoshParser());
+			_parserList.Add (new AdrTxtParser ());
         }
         public TerminalModel ParseUserAgent(String userAgent)
         {
