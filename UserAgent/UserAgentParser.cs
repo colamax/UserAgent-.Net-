@@ -109,11 +109,6 @@ namespace UserAgent
         //    }
         //}
         
-        public bool CheckChange()
-        {
-            return false;
-        }
-
         internal void Clear()
         {
             _parserList.Clear();
