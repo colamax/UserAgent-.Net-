@@ -5,22 +5,22 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading;
-using Light.Data;
 using UserAgent.Control;
 using UserAgent.Model;
 namespace UserAgent
 {
+    public delegate void ProcessUnknowUaEventHandler(string uaStr);
     public class UserAgentParser
     {
+        public event ProcessUnknowUaEventHandler OnProcessUnknowUa;
         List<Parser> _parserList = new List<Parser>();
         ReaderWriterLock _locker = new ReaderWriterLock();
         Dictionary<string, TerminalModel> _uaDict = new Dictionary<string, TerminalModel>();
         UaNotClearUserAgent uncua = new UaNotClearUserAgent();
 
-        private DataContext dataBase = null;
-        public UserAgentParser(string dataConfig)
+        
+        public UserAgentParser()
         {
-            dataBase = DataContextConfiguration.ContextCollection[dataConfig];
             LoadData();
         }
 
@@ -80,19 +80,35 @@ namespace UserAgent
                     }
                 }
             }
-            uncua.UserAgent = userAgent;
-            try
+            //uncua.UserAgent = userAgent;
+            //try
+            //{
+            //    dataBase.Insert(uncua);
+            //}
+            //catch (Exception e)
+            //{
+            //    e.ToString();
+            //}
+            if (OnProcessUnknowUa != null)
             {
-                dataBase.Insert(uncua);
+                //OnProcessUnknowUa.BeginInvoke(userAgent, new AsyncCallback(Callback), OnProcessUnknowUa);
+                OnProcessUnknowUa(userAgent);
             }
-            catch (Exception e)
-            {
-                e.ToString();
-            }
+
             SetCache(userAgent, tm);
             return tm;
         }
 
+        //void Callback(IAsyncResult result)
+        //{
+        //    ProcessUnknowUaEventHandler handler = result.AsyncState as ProcessUnknowUaEventHandler;
+        //    if (handler != null)
+        //    {
+
+        //        handler.EndInvoke(result);
+        //    }
+        //}
+        
         public bool CheckChange()
         {
             return false;

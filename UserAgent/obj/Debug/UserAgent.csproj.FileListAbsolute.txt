@@ -5,3 +5,10 @@ c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\obj\Debug
 c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\Light.Data.dll
 c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\MySql.Data.dll
 c:\users\max\documents\visual studio 2010\Projects\UserAgent\UserAgent\bin\Debug\Light.Data.xml
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\UserAgent.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\UserAgent.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\Light.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\MySql.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\Light.Data.xml
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\obj\Debug\UserAgent.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\obj\Debug\UserAgent.pdb

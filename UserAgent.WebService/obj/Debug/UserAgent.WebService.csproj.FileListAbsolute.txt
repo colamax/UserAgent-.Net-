@@ -9,3 +9,14 @@ C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.WebServic
 C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.WebService\bin\Light.Data.xml
 C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.WebService\obj\Debug\UserAgent.WebService.csprojResolveAssemblyReference.cache
 C:\Users\max\Documents\Visual Studio 2010\Projects\UserAgent\UserAgent.WebService\bin\UserAgent.WebService.dll.config
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\obj\Debug\UserAgent.WebService.csprojResolveAssemblyReference.cache
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\obj\Debug\UserAgent.WebService.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\UserAgent.WebService.dll.config
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\UserAgent.WebService.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\UserAgent.WebService.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\UserAgent.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\Light.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\MySql.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\UserAgent.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\bin\Light.Data.xml
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebService\obj\Debug\UserAgent.WebService.pdb

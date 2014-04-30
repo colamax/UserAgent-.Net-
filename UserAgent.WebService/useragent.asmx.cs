@@ -17,7 +17,7 @@ namespace UserAgent.WebService
     // [System.Web.Script.Services.ScriptService]
     public class useragent : System.Web.Services.WebService
     {
-        private UserAgentParser uap = new UserAgentParser("BasicConfigDataBase");
+        private UserAgentParser uap = new UserAgentParser();
         [WebMethod]
         public TerminalModel ParseUserAgent(string useragent)
         {
