@@ -6,3 +6,11 @@
 /Users/max/Documents/MaxGit/UserAgent/UserAgent.Show/bin/Debug/UserAgent.dll
 /Users/max/Documents/MaxGit/UserAgent/UserAgent.Show/bin/Debug/Light.Data.dll
 /Users/max/Documents/MaxGit/UserAgent/UserAgent.Show/bin/Debug/MySql.Data.dll
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/obj/x86/Debug/UserAgent.Show.exe
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/obj/x86/Debug/UserAgent.Show.exe.mdb
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/bin/Debug/UserAgent.dll
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/bin/Debug/Light.Data.dll
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/bin/Debug/MySql.Data.dll
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/bin/Debug/UserAgent.Show.exe.mdb
+/Users/max/Documents/MaxGit/UserAgent-.Net-/UserAgent.Show/bin/Debug/UserAgent.Show.exe
