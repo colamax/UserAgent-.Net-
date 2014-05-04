@@ -1,10 +1,8 @@
 添加数据库配置　<br/>
 UaOperateSystem 表,保存未能解释的UA用来二次分析<br/>
-<pre>
 <connectionStrings>
 	<add name="BasicConfigDataBase" connectionString="server=192.168.3.67;User Id=root;password=123456;database=CMMM;Allow Zero Datetime=True;charset=utf8" providerName="Light.Data.Mysql,Light.Data" />
 </connectionStrings>
-</pre>
 <br/>
 使用到的命名空间<br/>
 using UserAgent;<br/>
@@ -35,10 +33,12 @@ string Model:客户端机器类号 (默认值为空字符串)<br/>
 string Platform:客户端平台 (默认值为空字符串)<br/>
 <br/>
 Platform 目前主要有以下返回值<br/>
-Android<br/>
-IOS<br/>
-Windows Phone<br/>
-BlackBerry<br/>
-MacOX<br/>
-KJAVA<br/>
-MTK<br/>
+<pre>
+Android
+IOS
+Windows Phone
+BlackBerry
+MacOX
+KJAVA
+MTK
+</pre>
