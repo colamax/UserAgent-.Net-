@@ -1,9 +1,3 @@
-添加数据库配置　<br/>
-UaOperateSystem 表,保存未能解释的UA用来二次分析<br/>
-<connectionStrings>
-	<add name="BasicConfigDataBase" connectionString="server=192.168.3.67;User Id=root;password=123456;database=CMMM;Allow Zero Datetime=True;charset=utf8" providerName="Light.Data.Mysql,Light.Data" />
-</connectionStrings>
-<br/>
 使用到的命名空间<br/>
 using UserAgent;<br/>
 using UserAgent.Model;<br/>
