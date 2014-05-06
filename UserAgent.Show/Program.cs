@@ -26,6 +26,9 @@ namespace UserAgent.Show
 			StreamReader srReadFile = new StreamReader(strReadFilePath);
 			float total = 0;
 			float haveNum = 0;
+			float ucUser = 0;
+			int ucnum = 0;
+			int allnum = 0;
 			while (!srReadFile.EndOfStream)
 			{
 				string strReadLine = srReadFile.ReadLine(); //读取每行数据
@@ -38,6 +41,25 @@ namespace UserAgent.Show
 					sw.Stop();
 					if (tm.Platform != null && tm.Platform.Length>1) {
 						haveNum++;
+
+						Console.WriteLine (strReadLine); //屏幕打印每行数据
+						string[] sArray = strReadLine.Split ('\t');
+						if (sArray [1].Length > 0) {
+							int result=int.Parse(sArray [1].ToString());
+							Console.WriteLine("ALL+"+result);
+							allnum += result;
+						}
+
+						if(tm.Browser.Equals("UCBrowser")){
+							ucUser++;
+							Console.WriteLine (strReadLine); //屏幕打印每行数据
+							sArray = strReadLine.Split ('\t');
+							if (sArray [1].Length > 0) {
+								int result=int.Parse(sArray [1].ToString());
+								Console.WriteLine("UC+"+result);
+								ucnum += result;
+							}
+						}
 //						Console.WriteLine (strReadLine); //屏幕打印每行数据
 //						Console.WriteLine ("tm.Browser=" + tm.Browser);
 //						Console.WriteLine ("tm.Brand=" + tm.Brand);
@@ -46,7 +68,7 @@ namespace UserAgent.Show
 //						Console.WriteLine ("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 //						Console.WriteLine("++++>" + sw.ElapsedMilliseconds);
 					} else {
-						Console.WriteLine (strReadLine); //屏幕打印每行数据
+//						Console.WriteLine (strReadLine); //屏幕打印每行数据
 //						Console.WriteLine("---->" + sw.ElapsedMilliseconds);
 					}
 				}
@@ -57,6 +79,9 @@ namespace UserAgent.Show
 			Console.WriteLine("total:" + total);
 			Console.WriteLine("haveNum:" + haveNum);
 			Console.WriteLine("PER:" + haveNum/total*100+"%");
+			Console.WriteLine("ucUser:" + ucUser);
+			Console.WriteLine("UC:" + ucnum);
+			Console.WriteLine("总:" + allnum);
         }
 
         static void uap_OnProcessUnknowUa(string uaStr)
