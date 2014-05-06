@@ -14,13 +14,13 @@ namespace UserAgent.Show
         static void Main(string[] args)
         {
             UserAgentParser uap = new UserAgentParser();
-            //            uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            //			TerminalModel tm = uap.ParseUserAgent("DOOjjjjjjjjj-cn");
-            //            Console.WriteLine("tm.Browser=" + tm.Browser);
-            //            Console.WriteLine("tm.Brand=" + tm.Brand);
-            //            Console.WriteLine("tm.Model=" + tm.Model);
-            //            Console.WriteLine("tm.Platform=" + tm.Platform);
-            //            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+//            uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
+//			TerminalModel tm = uap.ParseUserAgent("DOOjjjjjjjjj-cn");
+//            Console.WriteLine("tm.Browser=" + tm.Browser);
+//            Console.WriteLine("tm.Brand=" + tm.Brand);
+//            Console.WriteLine("tm.Model=" + tm.Model);
+//            Console.WriteLine("tm.Platform=" + tm.Platform);
+//            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 
             string strReadFilePath = @"../../part-r-00000(6).txt";
             StreamReader srReadFile = new StreamReader(strReadFilePath);
@@ -64,18 +64,18 @@ namespace UserAgent.Show
                                 ucnum += result;
                             }
                         }
-                        //						Console.WriteLine (strReadLine); //屏幕打印每行数据
-                        //						Console.WriteLine ("tm.Browser=" + tm.Browser);
-                        //						Console.WriteLine ("tm.Brand=" + tm.Brand);
-                        //						Console.WriteLine ("tm.Model=" + tm.Model);
-                        //						Console.WriteLine ("tm.Platform=" + tm.Platform);
-                        //						Console.WriteLine ("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-                        //						Console.WriteLine("++++>" + sw.ElapsedMilliseconds);
+//						Console.WriteLine (strReadLine); //屏幕打印每行数据
+//						Console.WriteLine ("tm.Browser=" + tm.Browser);
+//						Console.WriteLine ("tm.Brand=" + tm.Brand);
+//						Console.WriteLine ("tm.Model=" + tm.Model);
+//						Console.WriteLine ("tm.Platform=" + tm.Platform);
+//						Console.WriteLine ("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+//						Console.WriteLine("++++>" + sw.ElapsedMilliseconds);
                     }
                     else
                     {
-                        //						Console.WriteLine (strReadLine); //屏幕打印每行数据
-                        //						Console.WriteLine("---->" + sw.ElapsedMilliseconds);
+//						Console.WriteLine (strReadLine); //屏幕打印每行数据
+//						Console.WriteLine("---->" + sw.ElapsedMilliseconds);
                     }
                 }
 

@@ -1,0 +1,4 @@
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebAPI\bin\UserAgent.WebAPI.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebAPI\bin\UserAgent.WebAPI.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebAPI\obj\Debug\UserAgent.WebAPI.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebAPI\obj\Debug\UserAgent.WebAPI.pdb
