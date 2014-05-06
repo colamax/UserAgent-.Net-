@@ -3,8 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="UserAgent.Show/Program.cs">
     <Files>
       <File FileName="UserAgent/UserAgentParser.cs" Line="1" Column="1" />
-      <File FileName="UserAgent.Show/Program.cs" Line="80" Column="44" />
-      <File FileName="UserAgent/Control/UCBrowserParser.cs" Line="19" Column="37" />
+      <File FileName="UserAgent.Show/Program.cs" Line="92" Column="16" />
+      <File FileName="UserAgent/Control/UCBrowserParser.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
