@@ -7,6 +7,7 @@ namespace UserAgent.Control
 	public class IOSParser : Parser
 	{
 		private Regex reg = new Regex (@"iPhone|U;iOS\s*(\d)(\.\d){0,2}",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+		private Regex reg2 = new Regex (@"CFNetwork.+Darwin",RegexOptions.Compiled|RegexOptions.IgnoreCase);
 		public IOSParser ()
 		{
 		}
@@ -15,9 +16,11 @@ namespace UserAgent.Control
 
 			if (reg.IsMatch (userAgent)) {
 				return true;
-			}else{
-				return false;
 			}
+			if (reg2.IsMatch (userAgent)) {
+				return true;
+			}
+			return false;
 		}
 		public override TerminalModel getTM (string userAgent)
 		{
