@@ -10,6 +10,7 @@ namespace UserAgent.Control
     {
 		private Regex reg = new Regex (@"Android[/\s]?((\d{1})(\.\d+)*)?",RegexOptions.Compiled|RegexOptions.IgnoreCase);
         private Regex reg2 = new Regex(@"Linux; U;\s?((\d{1})(\.\d+)*){1}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private Regex reg3 = new Regex(@"Android", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public AdrTxtParser()
 		{
 		}
@@ -22,6 +23,10 @@ namespace UserAgent.Control
             {
                 return true;
             }
+			if (reg3.IsMatch(userAgent))
+			{
+				return true;
+			}
             return false;
 		}
 		public override TerminalModel getTM (string userAgent)
