@@ -14,8 +14,8 @@ namespace UserAgent.Show
         static void Main(string[] args)
         {
             UserAgentParser uap = new UserAgentParser();
-//            uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent("AndroidCoolpad");
+            uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
+            TerminalModel tm = uap.ParseUserAgent("tbtui_2.4.0_p+D19A4V1CxjVNMXH2U5M1t6OluVeAmU");
             Console.WriteLine("tm.Browser=" + tm.Browser);
             Console.WriteLine("tm.Brand=" + tm.Brand);
             Console.WriteLine("tm.Model=" + tm.Model);
@@ -23,6 +23,7 @@ namespace UserAgent.Show
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             Console.ReadKey();
 
+            
             //string strReadFilePath = @"../../uaa.txt";
             //StreamReader srReadFile = new StreamReader(strReadFilePath);
             //float total = 0;
@@ -93,17 +94,7 @@ namespace UserAgent.Show
 
         static void uap_OnProcessUnknowUa(string uaStr)
         {
-            DataContext dataBase = DataContextConfiguration.ContextCollection["Baase"];
-            UaNotClearUserAgent uncua = new UaNotClearUserAgent();
-            uncua.UserAgent = uaStr;
-            try
-            {
-                dataBase.Insert(uncua);
-            }
-            catch (Exception e)
-            {
-                e.ToString();
-            }
+            Console.WriteLine(uaStr);
         }
 
     }

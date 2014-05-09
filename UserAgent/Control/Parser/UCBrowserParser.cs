@@ -30,6 +30,7 @@ namespace UserAgent.Control
 			var result = reg1.Match (userAgent).Groups;
 			if (result.Count > 1) {
 				if (result [1].Value != null) {
+                    Console.WriteLine(result[1].Value);
 					if (result [1].Value.Equals ("compatible")) {
 						if (userAgent.IndexOf ("Trident") >= 0) {
 							tm.Platform = "Windows Mobile";
@@ -68,10 +69,10 @@ namespace UserAgent.Control
 						result = reg4.Match (userAgent).Groups;
 						if (result.Count >= 8) {
 							if (result [6].Value != null) {
-								tm.Brand = result [6].Value;
+                                tm.Brand = result[6].Value.Trim();
 							}
 							if (result [7].Value != null) {
-								tm.Model = result [7].Value;
+                                tm.Model = result[7].Value.Trim();
 							}
 						}
 						if (userAgent.IndexOf ("Profile/MIDP") >= 0) {
@@ -82,9 +83,31 @@ namespace UserAgent.Control
 						tm.Platform = "BlackBerry";
 						return tm;
 					} else if (result [1].Value.Equals ("iPhone")) {
-						tm.Platform = "IOS";
-						return tm;
-					}
+                        tm.Brand = "Apple";
+                        tm.Platform = "IOS";
+                        return tm;
+                    }else if (result[1].Value.Equals("Symbian"))
+                    {
+                        tm.Platform = "Symbian";
+                        result = reg2.Match(userAgent).Groups;
+                        if (reg2.IsMatch(userAgent)) { 
+                           
+                            if (result[6].Value != null)
+                            {
+                                tm.Model = result[6].Value.Trim();
+                            }
+                        }
+                        return tm;
+                    }else if (result[1].Value.Equals("iOS"))
+                    {
+                        tm.Brand = "Apple";
+                        tm.Platform = "IOS";
+                        return tm;
+                    } else if (result[1].Value.Equals("Java"))
+                    {
+                        tm.Platform = "KJAVA";
+                        return tm;
+                    }
 				}
 			}
 			return tm;

@@ -10,7 +10,7 @@ namespace UserAgent.Control
     {
 		private Regex reg = new Regex (@"Android[/\s]?((\d{1})(\.\d+)*)?",RegexOptions.Compiled|RegexOptions.IgnoreCase);
         private Regex reg2 = new Regex(@"Linux; U;\s?((\d{1})(\.\d+)*){1}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-		private Regex reg3 = new Regex(@"Android", RegexOptions.Compiled);
+        private Regex reg3 = new Regex(@"Android", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public AdrTxtParser()
 		{
 		}

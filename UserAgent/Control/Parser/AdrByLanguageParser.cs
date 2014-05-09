@@ -8,10 +8,10 @@ namespace UserAgent.Control
 	public class AdrByLanguageParser : Parser
 	{
 		// ZTE-T U812; 2.3.7; meteorad; zh-cn
-		private Regex reg1 = new Regex (@"([\w|\s|\-]+); \d{1}.\d{1}.\d{1}.*zh-cn",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+        private Regex reg1 = new Regex(@"([\w|\s|\-|\+]+); \d{1}.\d{1}.\d{1}.*zh-[cn|hk|tw]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		// SM-N900; 4.3; JSS15J.N900ZSUCML1; zh-cn
-		private Regex reg2 = new Regex (@"([\w|\s|\-]+);\s\d{1}.\d{1};.*zh-cn",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+        private Regex reg2 = new Regex(@"([\w|\s|\-|\+]+);\s\d{1}.\d{1};.*zh-[cn|hk|tw]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		private Regex lastReg = null;
 		public AdrByLanguageParser ()

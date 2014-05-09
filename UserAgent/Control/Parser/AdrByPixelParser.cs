@@ -7,7 +7,6 @@ namespace UserAgent.Control
 {
 	public class AdrByPixelParser : Parser
 	{
-		// 2.3.7,ZTE-T U960s,480*800
 		private Regex reg = new Regex (@"^\d{1}.\d{1}.\d{1},([\w|\s|\-]+),[1-9]{1,3}[0-9]*[1-9]{1,3}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
 		public AdrByPixelParser ()
 		{

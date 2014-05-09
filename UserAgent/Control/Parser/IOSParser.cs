@@ -6,9 +6,9 @@ namespace UserAgent.Control
 {
 	public class IOSParser : Parser
 	{
-		private Regex reg = new Regex (@"iPhone|U;iOS\s*(\d)(\.\d){0,2}",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+        private Regex reg = new Regex(@"iPhone|U;iOS\s*(\d)(\.\d){0,2}|\biPhone.*Mobile|\biPod", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		private Regex reg2 = new Regex (@"CFNetwork.+Darwin",RegexOptions.Compiled|RegexOptions.IgnoreCase);
-        private Regex reg3 = new Regex(@"iPhone|IOS", RegexOptions.Compiled);
+        private Regex reg3 = new Regex(@"iPhone|App Store|iPad|iTouch|iPod", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		public IOSParser ()
 		{
 		}

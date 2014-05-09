@@ -12,7 +12,8 @@ namespace UserAgent.Control
 		}
 		public override bool isMatch (string userAgent)
 		{
-			if (userAgent.IndexOf ("WindowsPhoneOS") >= 0 || userAgent.IndexOf("Windows Phone")>=0) {
+            if (userAgent.IndexOf("WindowsPhoneOS") >= 0 || userAgent.IndexOf("Windows Phone") >= 0 || userAgent.IndexOf("WindowsPhone") >= 0 || userAgent.IndexOf("Windows Mobile") >= 0)
+            {
 				return true;
 			} else {
 				return false;

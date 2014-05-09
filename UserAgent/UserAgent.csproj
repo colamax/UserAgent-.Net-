@@ -43,27 +43,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\AdrByLanguageParser.cs" />
-    <Compile Include="Control\AdrByLanguagePixelParser.cs" />
-    <Compile Include="Control\AdrByPixelParser.cs" />
-    <Compile Include="Control\BaiduBoxAppParser.cs" />
-    <Compile Include="Control\BaiduBrowserParser.cs" />
-    <Compile Include="Control\BlackBerryParser.cs" />
-    <Compile Include="Control\IOSParser.cs" />
-    <Compile Include="Control\KJAVAParser.cs" />
-    <Compile Include="Control\MacintoshParser.cs" />
-    <Compile Include="Control\MAUIParser.cs" />
-    <Compile Include="Control\MicroMessengerParser.cs" />
-    <Compile Include="Control\MQQBrowserParser.cs" />
+    <Compile Include="Control\Abandon.cs" />
+    <Compile Include="Control\Abandon\DefultAB.cs" />
+    <Compile Include="Control\Abandon\TxtLengthAB.cs" />
+    <Compile Include="Control\Parser\AdrByPixelTxtParser.cs" />
+    <Compile Include="Control\Parser\AdrByLanguageParser.cs" />
+    <Compile Include="Control\Parser\AdrByLanguagePixelParser.cs" />
+    <Compile Include="Control\Parser\AdrByPixelParser.cs" />
+    <Compile Include="Control\Parser\AdrBySamsungPixel.cs" />
+    <Compile Include="Control\Parser\AdrMIUIParser.cs" />
+    <Compile Include="Control\Parser\BaiduBoxAppParser.cs" />
+    <Compile Include="Control\Parser\BaiduBrowserParser.cs" />
+    <Compile Include="Control\Parser\BlackBerryParser.cs" />
+    <Compile Include="Control\Parser\IOSParser.cs" />
+    <Compile Include="Control\Parser\KJAVAParser.cs" />
+    <Compile Include="Control\Parser\MacintoshParser.cs" />
+    <Compile Include="Control\Parser\MAUIParser.cs" />
+    <Compile Include="Control\Parser\MicroMessengerParser.cs" />
+    <Compile Include="Control\Parser\MQQBrowserParser.cs" />
     <Compile Include="Control\Parser.cs" />
-    <Compile Include="Control\TouchPalv5Parser.cs" />
-    <Compile Include="Control\UCBrowserParser.cs" />
-    <Compile Include="Control\WPOSTxtParser.cs" />
+    <Compile Include="Control\Parser\SymbianTxtParser.cs" />
+    <Compile Include="Control\Parser\TouchPalv5Parser.cs" />
+    <Compile Include="Control\Parser\UCBrowserParser.cs" />
+    <Compile Include="Control\Parser\WPOSTxtParser.cs" />
     <Compile Include="Model\TerminalModel.cs" />
     <Compile Include="Model\UaNotClearUserAgent.cs" />
     <Compile Include="UserAgentParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Control\AdrTxtParser.cs" />
+    <Compile Include="Control\Parser\AdrTxtParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

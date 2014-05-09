@@ -14,6 +14,7 @@ namespace UserAgent
     {
         public event ProcessUnknowUaEventHandler OnProcessUnknowUa;
         List<Parser> _parserList = new List<Parser>();
+        List<Abandon> _abandon_list = new List<Abandon>();
         ReaderWriterLock _locker = new ReaderWriterLock();
         Dictionary<string, TerminalModel> _uaDict = new Dictionary<string, TerminalModel>();
         UaNotClearUserAgent uncua = new UaNotClearUserAgent();
@@ -42,7 +43,7 @@ namespace UserAgent
 
         private void LoadData()
         {
-            _parserList.Add(new IOSParser());
+            _parserList.Add(new AdrMIUIParser());
             _parserList.Add(new UCBrowserParser());
             _parserList.Add(new MQQBrowserParser());
             _parserList.Add(new KJAVAParser());
@@ -55,9 +56,17 @@ namespace UserAgent
             _parserList.Add(new AdrByLanguageParser());
             _parserList.Add(new AdrByPixelParser());
             _parserList.Add(new AdrByLanguagePixelParser());
+            _parserList.Add(new AdrByPixelTxtParser());
+            _parserList.Add(new AdrBySamsungPixel());
             _parserList.Add(new WPOSTxtParser());
+            _parserList.Add(new IOSParser());
             _parserList.Add(new MacintoshParser());
+            _parserList.Add(new SymbianTxtParser());
 			_parserList.Add (new AdrTxtParser ());
+
+            //不加UA的标识
+            _abandon_list.Add(new TxtLengthAB());
+            _abandon_list.Add(new DefultAB());
         }
         public TerminalModel ParseUserAgent(String userAgent)
         {
@@ -73,27 +82,33 @@ namespace UserAgent
                 if (parser.isMatch(userAgent))
                 {
                     tm = parser.getTM(userAgent);
-                    if (tm.Platform != null)
+                    if (tm.Platform != null && tm.Platform != "")
                     {
                         SetCache(userAgent, tm);
                         return tm;
                     }
                 }
             }
-            //uncua.UserAgent = userAgent;
-            //try
-            //{
-            //    dataBase.Insert(uncua);
-            //}
-            //catch (Exception e)
-            //{
-            //    e.ToString();
-            //}
-            if (OnProcessUnknowUa != null)
+
+            Boolean callFun = false;
+            foreach (Abandon ab in _abandon_list)
             {
-                //OnProcessUnknowUa.BeginInvoke(userAgent, new AsyncCallback(Callback), OnProcessUnknowUa);
-                OnProcessUnknowUa(userAgent);
+                if (ab.isMatch(userAgent))
+                {
+                    callFun = true;
+                    break;
+                }
             }
+            if(callFun){
+
+            }else{
+                if (OnProcessUnknowUa != null)
+                {
+                    //OnProcessUnknowUa.BeginInvoke(userAgent, new AsyncCallback(Callback), OnProcessUnknowUa);
+                    OnProcessUnknowUa(userAgent);
+                }
+            }
+            
 
             SetCache(userAgent, tm);
             return tm;
