@@ -43,7 +43,6 @@ namespace UserAgent
 
         private void LoadData()
         {
-            _parserList.Add(new AdrTxtParser());
             _parserList.Add(new AdrMIUIParser());
             _parserList.Add(new UCBrowserParser());
             _parserList.Add(new MQQBrowserParser());
@@ -63,7 +62,7 @@ namespace UserAgent
             _parserList.Add(new IOSParser());
             _parserList.Add(new MacintoshParser());
             _parserList.Add(new SymbianTxtParser());
-			
+			_parserList.Add (new AdrTxtParser ());
 
             //不加UA的标识
             _abandon_list.Add(new TxtLengthAB());
