@@ -30,7 +30,6 @@ namespace UserAgent.Control
 			var result = reg1.Match (userAgent).Groups;
 			if (result.Count > 1) {
 				if (result [1].Value != null) {
-                    Console.WriteLine(result[1].Value);
 					if (result [1].Value.Equals ("compatible")) {
 						if (userAgent.IndexOf ("Trident") >= 0) {
 							tm.Platform = "Windows Mobile";
