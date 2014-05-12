@@ -15,7 +15,7 @@ namespace UserAgent.Show
         {
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent("Mozilla/5.0 (Linux; Android 4.4.2; C6802 Build/14.3.A.0.757) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 UCBrowser/3.1.0.403");
+            TerminalModel tm = uap.ParseUserAgent("UA");
             Console.WriteLine("tm.Browser=" + tm.Browser);
             Console.WriteLine("tm.Brand=" + tm.Brand);
             Console.WriteLine("tm.Model=" + tm.Model);

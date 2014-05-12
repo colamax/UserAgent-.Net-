@@ -42,11 +42,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UserAgent">
-      <HintPath>..\UserAgent\bin\Debug\UserAgent.dll</HintPath>
-    </Reference>
     <Reference Include="Light.Data">
       <HintPath>..\Library\Light.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="UserAgent, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UserAgent\bin\Debug\UserAgent.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
