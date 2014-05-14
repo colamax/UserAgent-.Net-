@@ -15,7 +15,7 @@ namespace UserAgent.Show
         {
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent(null);
+            TerminalModel tm = uap.ParseUserAgent("MI-ONE; MIUI/ICS24.0");
             Console.WriteLine("tm.Browser=" + tm.Browser);
             Console.WriteLine("tm.Brand=" + tm.Brand);
             Console.WriteLine("tm.Model=" + tm.Model);

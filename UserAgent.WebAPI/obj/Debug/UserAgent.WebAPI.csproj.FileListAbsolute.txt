@@ -1,10 +1,10 @@
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.WebApi.dll
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.WebApi.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\Light.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\MySql.Data.dll
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\Light.Data.xml
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.pdb
+C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\obj\Debug\UserAgent.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\obj\Debug\UserAgent.WebApi.dll
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\obj\Debug\UserAgent.WebApi.pdb
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.dll
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\Light.Data.dll
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\MySql.Data.dll
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\UserAgent.pdb
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\bin\Light.Data.xml
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent.WebApi\obj\Debug\UserAgent.WebApi.csprojResolveAssemblyReference.cache
