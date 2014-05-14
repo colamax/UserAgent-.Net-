@@ -30,7 +30,6 @@ namespace UserAgent.WebApi
             JavaScriptSerializer ser = new JavaScriptSerializer();
             String jsonStr = ser.Serialize(tm);
             Response.Write(jsonStr);
-            
         }
     }
 }

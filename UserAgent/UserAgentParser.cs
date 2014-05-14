@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,7 +17,8 @@ namespace UserAgent
         List<Parser> _parserList = new List<Parser>();
         List<Abandon> _abandon_list = new List<Abandon>();
         ReaderWriterLock _locker = new ReaderWriterLock();
-        Dictionary<string, TerminalModel> _uaDict = new Dictionary<string, TerminalModel>();
+        //Dictionary<string, TerminalModel> _uaDict = new Dictionary<string, TerminalModel>();
+        ConcurrentDictionary<string, TerminalModel> _uaDict = new ConcurrentDictionary<string, TerminalModel>();
         UaNotClearUserAgent uncua = new UaNotClearUserAgent();
 
         
@@ -28,17 +30,28 @@ namespace UserAgent
         TerminalModel GetCache(string userAgent)
         {
             TerminalModel tm = null;
-            _locker.AcquireReaderLock(1000);
+            if (string.IsNullOrEmpty(userAgent))
+            {
+                return tm;
+            }
+            //_locker.acquirereaderlock(1000);
+            //_uadict.trygetvalue(useragent, out tm);
+            //_locker.releasereaderlock();
             _uaDict.TryGetValue(userAgent, out tm);
-            _locker.ReleaseReaderLock();
+            //_locker.ReleaseReaderLock();
             return tm;
         }
 
         void SetCache(string userAgent, TerminalModel tm)
         {
-            _locker.AcquireWriterLock(1000);
-            _uaDict[userAgent] = tm;
-            _locker.ReleaseWriterLock();
+            //_locker.AcquireWriterLock(1000);
+            //_uaDict[userAgent] = tm;
+            //_locker.ReleaseWriterLock();
+            if (string.IsNullOrEmpty(userAgent))
+            {
+                return;
+            }
+            _uaDict.TryAdd(userAgent, tm);
         }
 
         private void LoadData()
@@ -70,6 +83,9 @@ namespace UserAgent
         }
         public TerminalModel ParseUserAgent(String userAgent)
         {
+            if (string.IsNullOrEmpty(userAgent)) {
+                return new TerminalModel();
+            }
             TerminalModel tm = GetCache(userAgent);
 
             if (tm != null)
@@ -124,9 +140,14 @@ namespace UserAgent
         //    }
         //}
         
-        internal void Clear()
-        {
-            _parserList.Clear();
+        //internal void Clear()
+        //{
+        //    _parserList.Clear();
+        //    _uaDict.Clear();
+        //}
+
+        //清空缓存
+        public void Clear() {
             _uaDict.Clear();
         }
     }

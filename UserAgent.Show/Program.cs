@@ -15,12 +15,13 @@ namespace UserAgent.Show
         {
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent("UA");
+            TerminalModel tm = uap.ParseUserAgent(null);
             Console.WriteLine("tm.Browser=" + tm.Browser);
             Console.WriteLine("tm.Brand=" + tm.Brand);
             Console.WriteLine("tm.Model=" + tm.Model);
             Console.WriteLine("tm.Platform=" + tm.Platform);
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            uap.Clear();
             Console.ReadKey();
 
             
