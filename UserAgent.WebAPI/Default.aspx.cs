@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
+using System.Configuration;
 using Light.Data;
 using UserAgent;
 using UserAgent.Model;
@@ -22,12 +23,22 @@ namespace UserAgent.WebApi
             catch (Exception)
             {
             }
+
             string ua = Request.QueryString["ua"];
             TerminalModel tm = new TerminalModel();
             if (ua != null && ua.Length > 0)
             {
+                String SaveUnloadUAStr = ConfigurationManager.AppSettings["SaveUnloadUA"].Trim().ToString();
+
                 UserAgentParser uap = new UserAgentParser();
-                uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
+                if (SaveUnloadUAStr != null) {
+                    if (Convert.ToBoolean(SaveUnloadUAStr))
+                    {
+                        uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
+                    }
+                }
+                
+                
                 tm = uap.ParseUserAgent(ua);
                 //Response.Write("tm.Browser=" + tm.Browser);
                 //Response.Write("tm.Brand=" + tm.Brand);
@@ -42,10 +53,10 @@ namespace UserAgent.WebApi
         }
         static void uap_OnProcessUnknowUa(string uaStr)
         {
-            //Console.WriteLine(uaStr);
             UaNotClearUserAgent uncu = new UaNotClearUserAgent();
             uncu.UserAgent = uaStr;
-            try { 
+            try
+            {
                 logDataBase.Insert(uncu);
             }
             catch (Exception)
