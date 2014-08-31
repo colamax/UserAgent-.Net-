@@ -22,7 +22,7 @@ namespace UserAgent.Control
 		public override TerminalModel getTM (string userAgent)
 		{
 			TerminalModel tm = new TerminalModel ();
-			tm.Platform = "Windows Phone";
+			tm.Platform = "WindowsPhone";
 			return tm;
 		}
 	}

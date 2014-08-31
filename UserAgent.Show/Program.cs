@@ -15,7 +15,7 @@ namespace UserAgent.Show
         {
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent("MI-ONE; MIUI/ICS24.0");
+            TerminalModel tm = uap.ParseUserAgent("Nokia6600/1.0 (4.04.0) SymbianOS/7.0s Series60/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.0");
             Console.WriteLine("tm.Browser=" + tm.Browser);
             Console.WriteLine("tm.Brand=" + tm.Brand);
             Console.WriteLine("tm.Model=" + tm.Model);

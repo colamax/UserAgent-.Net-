@@ -32,7 +32,7 @@ namespace UserAgent.Control
 						result = reg2.Match (userAgent).Groups;
 						if(result [1].Value!=null){
 							if (result [1].Value.IndexOf ("Windows Phone") >= 0) {
-								tm.Platform = "Windows Phone";
+								tm.Platform = "WindowsPhone";
 							}
 						}
 						if(result [9].Value!=null){

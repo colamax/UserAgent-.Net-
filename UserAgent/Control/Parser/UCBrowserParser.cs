@@ -32,7 +32,7 @@ namespace UserAgent.Control
 				if (result [1].Value != null) {
 					if (result [1].Value.Equals ("compatible")) {
 						if (userAgent.IndexOf ("Trident") >= 0) {
-							tm.Platform = "Windows Mobile";
+							tm.Platform = "WindowsMobile";
 						}
 					} else if (result [1].Value.Equals ("MIDP-2.0")) {
 						tm.Platform = "Android";
@@ -64,7 +64,7 @@ namespace UserAgent.Control
 						tm.Platform = "IOS";
 						return tm;
 					} else if (result [1].Value.Equals ("Windows")) {
-						tm.Platform = "Windows Phone";
+						tm.Platform = "WindowsPhone";
 						result = reg4.Match (userAgent).Groups;
 						if (result.Count >= 8) {
 							if (result [6].Value != null) {

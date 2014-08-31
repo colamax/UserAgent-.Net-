@@ -40,7 +40,7 @@ namespace UserAgent.Control
 				if (reg3.IsMatch (userAgent)) {
 					result = reg3.Match (userAgent).Groups;
 					if (result [0].Value.IndexOf ("Windows Phone") >= 0) {
-						tm.Platform = "Windows Phone";
+						tm.Platform = "WindowsPhone";
 					}
 					if (result [8].Value !=null) {
 						tm.Brand = result [8].Value.Trim ();

@@ -12,4 +12,3 @@ C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\MySql.Data.dll
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\bin\Debug\Light.Data.xml
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\obj\Debug\UserAgent.dll
 C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\obj\Debug\UserAgent.pdb
-C:\Users\max\Documents\GitHub\UserAgent-.Net-\UserAgent\obj\Debug\UserAgent.csprojResolveAssemblyReference.cache

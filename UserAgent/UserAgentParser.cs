@@ -59,7 +59,6 @@ namespace UserAgent
             _parserList.Add(new AdrMIUIParser());
             _parserList.Add(new UCBrowserParser());
             _parserList.Add(new MQQBrowserParser());
-            _parserList.Add(new KJAVAParser());
             _parserList.Add(new MAUIParser());
             _parserList.Add(new MicroMessengerParser());
             _parserList.Add(new BaiduBrowserParser());
@@ -75,6 +74,7 @@ namespace UserAgent
             _parserList.Add(new IOSParser());
             _parserList.Add(new MacintoshParser());
             _parserList.Add(new SymbianTxtParser());
+            _parserList.Add(new KJAVAParser());
 			_parserList.Add (new AdrTxtParser ());
 
             //不加UA的标识
