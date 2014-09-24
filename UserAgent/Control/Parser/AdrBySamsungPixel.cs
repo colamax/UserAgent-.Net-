@@ -7,7 +7,7 @@ namespace UserAgent.Control
 {
     class AdrBySamsungPixel : Parser
     {
-        private Regex reg = new Regex(@"samsung-([\w|\-|\s]+),[1-9]{1,3}[0-9]*[1-9]{1,3}[0-9]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private Regex reg = new Regex(@"samsung-([\w|\-|\s]+),[0-9]{1,3}[0-9]*[1-9]{1,3}[0-9]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         public override bool isMatch(string userAgent)
         {

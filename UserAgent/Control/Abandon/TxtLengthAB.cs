@@ -5,7 +5,7 @@ namespace UserAgent.Control
 {
     class TxtLengthAB :Abandon
     {
-        private Regex reg1 = new Regex(@"^[A-Za-z0-9=+/]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private Regex reg1 = new Regex(@"^[A-Za-z0-9=+/_]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public override bool isMatch(string userAgent)
         {
             if(userAgent.Length >=200){

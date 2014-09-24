@@ -56,6 +56,7 @@ namespace UserAgent
 
         private void LoadData()
         {
+			_parserList.Add(new AiMeiTuanParser ());
             _parserList.Add(new AdrMIUIParser());
             _parserList.Add(new UCBrowserParser());
             _parserList.Add(new MQQBrowserParser());

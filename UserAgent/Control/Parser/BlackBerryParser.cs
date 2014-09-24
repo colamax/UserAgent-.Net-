@@ -6,12 +6,13 @@ namespace UserAgent.Control
 {
 	public class BlackBerryParser : Parser
 	{
+		private Regex reg3 = new Regex(@"BlackBerry", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		public BlackBerryParser ()
 		{
 		}
 		public override bool isMatch (string userAgent)
 		{
-			if (userAgent.IndexOf ("BlackBerry") >= 0) {
+			if (reg3.IsMatch (userAgent)) {
 				return true;
 			} else {
 				return false;

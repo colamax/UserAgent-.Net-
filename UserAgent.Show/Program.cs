@@ -13,20 +13,42 @@ namespace UserAgent.Show
     {
         static void Main(string[] args)
         {
+//			Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-            TerminalModel tm = uap.ParseUserAgent("Nokia6600/1.0 (4.04.0) SymbianOS/7.0s Series60/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.0");
-            Console.WriteLine("tm.Browser=" + tm.Browser);
-            Console.WriteLine("tm.Brand=" + tm.Brand);
-            Console.WriteLine("tm.Model=" + tm.Model);
-            Console.WriteLine("tm.Platform=" + tm.Platform);
-            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            uap.Clear();
-            Console.ReadKey();
+//			TerminalModel tm = uap.ParseUserAgent("blackberry8700/4.2.1 profile/midp-2.0 configuration/cldc-1.1 vendorid/114");
+//            Console.WriteLine("tm.Browser=" + tm.Browser);
+//            Console.WriteLine("tm.Brand=" + tm.Brand);
+//            Console.WriteLine("tm.Model=" + tm.Model);
+//            Console.WriteLine("tm.Platform=" + tm.Platform);
+//            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+//            uap.Clear();
+//            Console.ReadKey();
 
-            
-            //string strReadFilePath = @"../../uaa.txt";
-            //StreamReader srReadFile = new StreamReader(strReadFilePath);
+			string strReadFilePath = @"aa.txt";
+            StreamReader srReadFile = new StreamReader(strReadFilePath);
+			while (!srReadFile.EndOfStream)
+			{
+				string strReadLine = srReadFile.ReadLine(); //读取每行数据
+				if (strReadLine != null) 
+				{
+					TerminalModel tm = uap.ParseUserAgent(strReadLine);
+					if (tm.Platform != null && tm.Platform.Length > 1) {
+						Console.WriteLine(strReadLine); //屏幕打印每行数据
+			            Console.WriteLine ("tm.Browser=" + tm.Browser);
+			            Console.WriteLine ("tm.Brand=" + tm.Brand);
+			            Console.WriteLine ("tm.Model=" + tm.Model);
+			            Console.WriteLine ("tm.Platform=" + tm.Platform);
+					} else {
+//						Console.WriteLine(strReadLine); //屏幕打印每行数据
+					}
+				}
+			}
+			srReadFile.Close();
+
+
+			//string strReadFilePath = @"../../uaa.txt";
+//			StreamReader srReadFile = new StreamReader(strReadFilePath);
             //float total = 0;
             //float haveNum = 0;
             //float ucUser = 0;
@@ -95,7 +117,10 @@ namespace UserAgent.Show
 
         static void uap_OnProcessUnknowUa(string uaStr)
         {
+			Console.WriteLine ("-------------------");
+			Console.WriteLine("uap_OnProcessUnknowUa");
             Console.WriteLine(uaStr);
+			Console.WriteLine ("-------------------");
         }
 
     }

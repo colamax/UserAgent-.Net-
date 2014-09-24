@@ -7,9 +7,9 @@ namespace UserAgent.Control
 {
 	public class AdrByLanguagePixelParser : Parser
 	{
-		private Regex reg1 = new Regex (@"U;\d{1}.\d{1}.\d{1};.*Zh[_|\-]cn;([\w|\s|\-]+);[1-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
-		private Regex reg2 = new Regex (@"U;\d{1}.\d{1};.*Zh[_|\-]cn;([\w|\s|\-]+);[1-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
-		private Regex reg3 = new Regex (@"U;\d{1}.[\w|\-|\s]+;.*Zh[_|\-]cn;([\w|\s|\-]+);[1-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+		private Regex reg1 = new Regex (@"U;\d{1}.\d{1}.\d{1};.*Zh[_|\-]cn;([\w|\s|\-]+);[0-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+		private Regex reg2 = new Regex (@"U;\d{1}.\d{1};.*Zh[_|\-]cn;([\w|\s|\-]+);[0-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+		private Regex reg3 = new Regex (@"U;\d{1}.[\w|\-|\s]+;.*Zh[_|\-]cn;([\w|\s|\-]+);[0-9]{1,4}[0-9]*[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
 		private Regex lastReg = null;
 		public AdrByLanguagePixelParser ()
 		{
