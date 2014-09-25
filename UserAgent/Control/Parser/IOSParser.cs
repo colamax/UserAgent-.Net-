@@ -10,6 +10,8 @@ namespace UserAgent.Control
 		private Regex reg2 = new Regex (@"CFNetwork.+Darwin",RegexOptions.Compiled|RegexOptions.IgnoreCase);
         private Regex reg3 = new Regex(@"iPhone|App Store|iPad|iTouch|iPod", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		private Regex reg4 = new Regex(@"iOS\s[\d\.]{1,}\d{1};", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+//		iOS/6.1 (10B143) dataaccessd/1.0
+		private Regex reg5 = new Regex(@"iOS/[\d\.]{1,}\d{1}.*dataaccessd", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		public IOSParser ()
 		{
 		}
@@ -27,6 +29,10 @@ namespace UserAgent.Control
                 return true;
             }
 			if (reg4.IsMatch(userAgent))
+			{
+				return true;
+			}
+			if (reg5.IsMatch(userAgent))
 			{
 				return true;
 			}

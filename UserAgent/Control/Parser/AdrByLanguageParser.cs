@@ -9,7 +9,7 @@ namespace UserAgent.Control
 	{
 		// ZTE-U X876; 2.1-update1; DREAM_X876 1.0; zh-cn
 		// ZTE-T U812; 2.3.7; meteorad; zh-cn
-		private Regex reg1 = new Regex(@"([\w|\s|\-|\+]+); [\d\.]{1,}\d{1}.*zh-[cn|hk|tw]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private Regex reg1 = new Regex(@"([\w|\s|\-|\+|\(|\)|\/]+); [\d\.]{1,}\d{1}.*zh-[cn|hk|tw]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		// ZTE-U X876; 2.1-update1; DREAM_X876 1.0; zh-cn
 //        private Regex reg2 = new Regex(@"([\w|\s|\-|\+]+);\s\d{1}.\d{1};.*zh-[cn|hk|tw]", RegexOptions.Compiled | RegexOptions.IgnoreCase);

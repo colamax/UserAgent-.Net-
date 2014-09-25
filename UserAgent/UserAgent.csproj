@@ -74,6 +74,7 @@
     <Compile Include="Control\Parser\WP7SimpleParser.cs" />
     <Compile Include="Control\Parser\WPSearchParser.cs" />
     <Compile Include="Control\Parser\UCWebSimpleParser.cs" />
+    <Compile Include="Control\Parser\IcoolWeatherParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

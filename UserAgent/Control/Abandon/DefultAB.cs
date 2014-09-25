@@ -23,6 +23,7 @@ namespace UserAgent.Control
 			defultReg.Add(new Regex(@"^User-Agent:", RegexOptions.Compiled | RegexOptions.IgnoreCase));
 			defultReg.Add(new Regex(@"^apache-httpclient/suishen", RegexOptions.Compiled | RegexOptions.IgnoreCase));
 			defultReg.Add(new Regex(@"^avgmobilation", RegexOptions.Compiled | RegexOptions.IgnoreCase));
+			defultReg.Add(new Regex(@"pkg:com.imangi.templerun2.paid,udid:", RegexOptions.Compiled | RegexOptions.IgnoreCase));
         }
         //private Regex reg1 = new Regex(@"^b.a.a.a.a.b@[A-Za-z0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         //private Regex reg2 = new Regex(@"Version:meishij", RegexOptions.Compiled | RegexOptions.IgnoreCase);

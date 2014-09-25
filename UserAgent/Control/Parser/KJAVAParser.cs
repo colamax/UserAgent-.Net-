@@ -17,6 +17,12 @@ namespace UserAgent.Control
 			if (userAgent.IndexOf ("Browser/OpenWave") >= 0) {
 				return true;
 			}
+			if (userAgent.IndexOf ("j2me") >= 0) {
+				return true;
+			}
+			if (userAgent.IndexOf ("J2ME") >= 0) {
+				return true;
+			}
 			return false;
 		}
 		public override TerminalModel getTM (string userAgent)

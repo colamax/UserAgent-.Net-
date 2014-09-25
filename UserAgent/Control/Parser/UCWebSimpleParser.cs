@@ -21,6 +21,13 @@ namespace UserAgent.Control
 		private Regex bbreg = new Regex(@"ucweb/2.0.*\(blackberry;[u|\s]+;(.*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 //		ucweb/2.0 (linux; u; adr
 		private Regex sbreg = new Regex(@"ucweb/2.0.*\(linux; u; adr(.*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+//		j2me/ucweb7.4.0.57
+		private Regex j2mereg = new Regex(@"j2me/ucweb[\d|\.]+(.*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+//		JUC (Linux; U; 索-4.0.0; zh-cn; Q101; 480*800) UCWEB7.9.0.94/139/800
+//		juc(linux;u;2.1-update1_hiapk_1.1_xxkj;zh_cn;milestone xt720;480*854;)ucweb7.7.0.85/139/800
+		private Regex jucreg = new Regex(@"juc[\s]{0,}\(linux;[\s]{0,}u;.*;[\w|\s|\-|\_]+;(.*);[\s]{0,}[0-9]{1,4}[0-9][*|X|x]{1}[1-9]{1,4}[0-9]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+//		maui_wap_browser/ucweb7.9.0.94/109/33456
+		private Regex mtkreg = new Regex(@"maui_wap_browser/ucweb(.*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		private Regex lastReg = null;
 		public UCWebSimpleParser ()
 		{
@@ -62,6 +69,21 @@ namespace UserAgent.Control
 				lastInt = 7;
 				return true;
 			}
+			if (j2mereg.IsMatch (userAgent)) {
+				lastReg = j2mereg;
+				lastInt = 8;
+				return true;
+			}
+			if (jucreg.IsMatch (userAgent)) {
+				lastReg = jucreg;
+				lastInt = 9;
+				return true;
+			}
+			if (mtkreg.IsMatch (userAgent)) {
+				lastReg = mtkreg;
+				lastInt = 10;
+				return true;
+			}
 			return false;
 		}
 		public override TerminalModel getTM (string userAgent)
@@ -98,6 +120,16 @@ namespace UserAgent.Control
 					break;
 				case 7:
 					tm.Platform = "Android";
+					break;
+				case 8:
+					tm.Platform = "KJAVA";
+					break;
+				case 9:
+					tm.Platform = "Android";
+					tm.Model = result [1].Value.Trim ();
+					break;
+				case 10:
+					tm.Platform = "MTK";
 					break;
 				}
 

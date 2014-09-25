@@ -13,38 +13,39 @@ namespace UserAgent.Show
     {
         static void Main(string[] args)
         {
+//			Dalvlk/l.6.0 (Llnux; U; Androld 4.2.l; M353 Bulld/JOP40D)
 //			Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             UserAgentParser uap = new UserAgentParser();
             uap.OnProcessUnknowUa += new ProcessUnknowUaEventHandler(uap_OnProcessUnknowUa);
-//			TerminalModel tm = uap.ParseUserAgent("blackberry8700/4.2.1 profile/midp-2.0 configuration/cldc-1.1 vendorid/114");
-//            Console.WriteLine("tm.Browser=" + tm.Browser);
-//            Console.WriteLine("tm.Brand=" + tm.Brand);
-//            Console.WriteLine("tm.Model=" + tm.Model);
-//            Console.WriteLine("tm.Platform=" + tm.Platform);
-//            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-//            uap.Clear();
-//            Console.ReadKey();
+			TerminalModel tm = uap.ParseUserAgent("w2(mt6589/4); 4.3.1; s530w2p05v05; zh-cn");
+            Console.WriteLine("tm.Browser=" + tm.Browser);
+            Console.WriteLine("tm.Brand=" + tm.Brand);
+            Console.WriteLine("tm.Model=" + tm.Model);
+            Console.WriteLine("tm.Platform=" + tm.Platform);
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            uap.Clear();
+            Console.ReadKey();
 
-			string strReadFilePath = @"aa.txt";
-            StreamReader srReadFile = new StreamReader(strReadFilePath);
-			while (!srReadFile.EndOfStream)
-			{
-				string strReadLine = srReadFile.ReadLine(); //读取每行数据
-				if (strReadLine != null) 
-				{
-					TerminalModel tm = uap.ParseUserAgent(strReadLine);
-					if (tm.Platform != null && tm.Platform.Length > 1) {
-						Console.WriteLine(strReadLine); //屏幕打印每行数据
-			            Console.WriteLine ("tm.Browser=" + tm.Browser);
-			            Console.WriteLine ("tm.Brand=" + tm.Brand);
-			            Console.WriteLine ("tm.Model=" + tm.Model);
-			            Console.WriteLine ("tm.Platform=" + tm.Platform);
-					} else {
-//						Console.WriteLine(strReadLine); //屏幕打印每行数据
-					}
-				}
-			}
-			srReadFile.Close();
+//			string strReadFilePath = @"aa.txt";
+//            StreamReader srReadFile = new StreamReader(strReadFilePath);
+//			while (!srReadFile.EndOfStream)
+//			{
+//				string strReadLine = srReadFile.ReadLine(); //读取每行数据
+//				if (strReadLine != null) 
+//				{
+//					TerminalModel tm = uap.ParseUserAgent(strReadLine);
+//					if (tm.Platform != null && tm.Platform.Length > 1) {
+////						Console.WriteLine(strReadLine); //屏幕打印每行数据
+////			            Console.WriteLine ("tm.Browser=" + tm.Browser);
+////			            Console.WriteLine ("tm.Brand=" + tm.Brand);
+////			            Console.WriteLine ("tm.Model=" + tm.Model);
+////			            Console.WriteLine ("tm.Platform=" + tm.Platform);
+//					} else {
+////						Console.WriteLine(strReadLine); //屏幕打印每行数据
+//					}
+//				}
+//			}
+//			srReadFile.Close();
 
 
 			//string strReadFilePath = @"../../uaa.txt";

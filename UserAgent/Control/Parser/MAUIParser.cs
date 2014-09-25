@@ -6,16 +6,19 @@ namespace UserAgent.Control
 {
 	public class MAUIParser : Parser
 	{
+		private Regex reg = new Regex (@"MAUI_WAP_Browser",RegexOptions.Compiled|RegexOptions.IgnoreCase);
 		public MAUIParser ()
 		{
 		}
 		public override bool isMatch (string userAgent)
 		{
+			if (reg.IsMatch (userAgent)) {
+				return true;
+			}
 			if (userAgent.IndexOf ("Browser/MAUI") >= 0) {
 				return true;
-			} else {
-				return false;
 			}
+			return false;
 		}
 		public override TerminalModel getTM (string userAgent)
 		{
