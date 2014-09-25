@@ -70,6 +70,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Control\Parser\AdrTxtParser.cs" />
     <Compile Include="Control\Parser\AiMeiTuanParser.cs" />
+    <Compile Include="Control\Parser\ApplewebkitTxtParser.cs" />
+    <Compile Include="Control\Parser\WP7SimpleParser.cs" />
+    <Compile Include="Control\Parser\WPSearchParser.cs" />
+    <Compile Include="Control\Parser\UCWebSimpleParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,12 +8,13 @@ namespace UserAgent.Control
         private Regex reg1 = new Regex(@"^[A-Za-z0-9=+/_]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public override bool isMatch(string userAgent)
         {
-            if(userAgent.Length >=200){
-                if (reg1.IsMatch(userAgent))
-                {
-                    return true;
-                }
+			if(userAgent.Length >=100 || userAgent.Length <50){
+				if (reg1.IsMatch(userAgent))
+				{
+					return true;
+				}
             }
+
             return false;
         }
     }

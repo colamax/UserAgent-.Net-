@@ -20,6 +20,9 @@ namespace UserAgent.Control
             defultReg.Add(new Regex(@"^pkg:com.[A-Za-z0-9]+.[A-Za-z0-9]+,udid:[\w]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase));
             defultReg.Add(new Regex(@"^qiushibalke_[0-9].[0-9].[0-9]_[\w]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase));
             defultReg.Add(new Regex(@"^tbtui_2.4.0_p\+[\w|\+|\/]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase));
+			defultReg.Add(new Regex(@"^User-Agent:", RegexOptions.Compiled | RegexOptions.IgnoreCase));
+			defultReg.Add(new Regex(@"^apache-httpclient/suishen", RegexOptions.Compiled | RegexOptions.IgnoreCase));
+			defultReg.Add(new Regex(@"^avgmobilation", RegexOptions.Compiled | RegexOptions.IgnoreCase));
         }
         //private Regex reg1 = new Regex(@"^b.a.a.a.a.b@[A-Za-z0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         //private Regex reg2 = new Regex(@"Version:meishij", RegexOptions.Compiled | RegexOptions.IgnoreCase);

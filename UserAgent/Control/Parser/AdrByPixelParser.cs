@@ -7,7 +7,9 @@ namespace UserAgent.Control
 {
 	public class AdrByPixelParser : Parser
 	{
-		private Regex reg = new Regex (@"^\d{1}.\d{1}.\d{1},([\w|\s|\-]+),[0-9]{1,3}[0-9]*[1-9]{1,3}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
+//		4.0.3 GT-I9100 800x480 mobile 15
+
+		private Regex reg = new Regex (@"[\d\.]{1,}\d{1}[,|\s]{1}([\w|\s|\-|\%]+)[,|\s]{1}[0-9]{1,4}[0-9][*|X|x]{1}[1-9]{1,4}[0-9]",RegexOptions.Compiled|RegexOptions.IgnoreCase);
 		public AdrByPixelParser ()
 		{
 		}

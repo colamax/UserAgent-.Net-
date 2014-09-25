@@ -56,6 +56,9 @@ namespace UserAgent
 
         private void LoadData()
         {
+			_parserList.Add (new UCWebSimpleParser ());
+			_parserList.Add (new WPSearchParser ());
+			_parserList.Add (new WP7SimpleParser());
 			_parserList.Add(new AiMeiTuanParser ());
             _parserList.Add(new AdrMIUIParser());
             _parserList.Add(new UCBrowserParser());
@@ -77,6 +80,7 @@ namespace UserAgent
             _parserList.Add(new SymbianTxtParser());
             _parserList.Add(new KJAVAParser());
 			_parserList.Add (new AdrTxtParser ());
+			_parserList.Add (new ApplewebkitTxtParser ());
 
             //不加UA的标识
             _abandon_list.Add(new TxtLengthAB());
